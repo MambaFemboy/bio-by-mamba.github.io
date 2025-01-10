@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: 'Courier New', monospace;
-    color: #33ff33;
-    background: #0d0d0d;
+    background: linear-gradient(135deg, #11001c, #250036);
+    color: #ffb3f8;
     overflow: hidden;
 }
 
@@ -24,22 +24,39 @@ header {
 header h1 {
     font-size: 3rem;
     text-transform: uppercase;
-    text-shadow: 0 0 10px #33ff33, 0 0 20px #33ff33, 0 0 30px #00ff00;
+    text-shadow: 0 0 10px #ff73d9, 0 0 20px #ffb3f8, 0 0 30px #ff66c4;
     animation: glitch 1.5s infinite alternate-reverse;
 }
 
 .subtitle {
     font-size: 1.2rem;
     animation: flicker 2s infinite alternate;
+    color: #ffb3f8;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border: 4px solid #ff73d9;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 179, 248, 0.6);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card {
-    background: rgba(13, 13, 13, 0.8);
-    border: 1px solid #33ff33;
-    border-radius: 10px;
+    background: rgba(255, 179, 248, 0.1);
+    border: 1px solid #ff73d9;
+    border-radius: 15px;
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 0 0 15px rgba(51, 255, 51, 0.5);
+    box-shadow: 0 0 15px rgba(255, 179, 248, 0.3);
     animation: fade-in 1s ease-in-out forwards;
     transform: translateY(20px);
     opacity: 0;
@@ -48,8 +65,8 @@ header h1 {
 .card h2 {
     margin-bottom: 15px;
     font-size: 1.5rem;
-    color: #33ff33;
-    text-shadow: 0 0 10px #00ff00;
+    color: #ff73d9;
+    text-shadow: 0 0 10px #ff73d9;
 }
 
 ul {
@@ -59,16 +76,16 @@ ul {
 
 ul li::before {
     content: "> ";
-    color: #33ff33;
+    color: #ff73d9;
 }
 
 a {
-    color: #33ff33;
+    color: #ffb3f8;
     text-decoration: none;
 }
 
 a:hover {
-    text-shadow: 0 0 10px #33ff33;
+    text-shadow: 0 0 10px #ffb3f8;
 }
 
 /* Background */
@@ -90,7 +107,7 @@ a:hover {
         0deg,
         transparent 0,
         transparent 1px,
-        rgba(51, 255, 51, 0.2) 2px
+        rgba(255, 179, 248, 0.2) 2px
     );
     animation: scroll 10s linear infinite;
 }
@@ -102,8 +119,8 @@ a:hover {
 }
 
 @keyframes glitch {
-    0%, 100% { text-shadow: 2px 0 red, -2px 0 blue; }
-    50% { text-shadow: -2px 0 red, 2px 0 blue; }
+    0%, 100% { text-shadow: 2px 0 #ff66c4, -2px 0 #ffb3f8; }
+    50% { text-shadow: -2px 0 #ff66c4, 2px 0 #ffb3f8; }
 }
 
 @keyframes fade-in {
