@@ -1,0 +1,89 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: #0d0d0d;
+    color: #33ff33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 5px #33ff33, 0 0 10px #33ff33;
+    animation: flicker 3s infinite, typewriter 4s steps(30) 1;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #33ff33;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: flicker 1.5s infinite alternate;
+}
+
+section {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li::before {
+    content: "> ";
+    color: #33ff33;
+}
+
+a {
+    color: #33ff33;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Анимации */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 0 red, -2px 0 blue; }
+    50% { text-shadow: -2px 0 red, 2px 0 blue; }
+    100% { text-shadow: 2px 0 red, -2px 0 blue; }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
