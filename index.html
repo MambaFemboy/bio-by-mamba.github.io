@@ -1,209 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Фембой, разработчик и цифровой авантюрист. Технологии, креатив и стиль.">
-    <title>Femboy Hacker Bio1</title>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Фембой хакер — моя биография в стиле кодинга и стиля">
+    <title>Фембой Хакер — Биография</title>
     <style>
-        /* Global Styles */
         body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #121212;
+            color: #00FF00;
             margin: 0;
-            font-family: 'VT323', monospace;
-            background: radial-gradient(circle, #250036, #11001c 80%);
-            color: #ffb3f8;
-            overflow: hidden;
+            padding: 0;
+            overflow-x: hidden;
         }
-
         .container {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
             padding: 20px;
         }
-
-        header {
-            margin-bottom: 50px;
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            text-shadow: 0 0 15px #ff73d9, 0 0 30px #ffb3f8, 0 0 45px #ff66c4;
-            animation: glitch 1.5s infinite alternate-reverse;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            animation: flicker 2s infinite alternate;
-            color: #ffb3f8;
-        }
-
-        .avatar {
-            width: 150px;
-            height: 150px;
+        .header {
+            font-size: 36px;
+            text-align: center;
+            border-bottom: 2px solid #00FF00;
+            padding-bottom: 10px;
             margin-bottom: 20px;
-            border: 4px solid #ff73d9;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(255, 179, 248, 0.7);
         }
-
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .intro {
+            font-size: 18px;
+            line-height: 1.6;
         }
-
-        .card {
-            background: rgba(255, 179, 248, 0.1);
-            border: 1px solid #ff73d9;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 20px 0;
-            box-shadow: 0 0 20px rgba(255, 179, 248, 0.4);
-            animation: fade-in 1.5s ease-in-out forwards;
-            transform: translateY(30px);
-            opacity: 0;
+        .section {
+            margin-top: 20px;
+            padding-left: 10px;
         }
-
-        .card h2 {
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            color: #ff73d9;
-            text-shadow: 0 0 15px #ff73d9;
+        .code {
+            font-size: 14px;
+            color: #00FF00;
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-top: 10px;
         }
-
-        ul {
-            list-style: none;
-            padding: 0;
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            text-align: center;
         }
-
-        ul li::before {
-            content: "➤ ";
-            color: #ff73d9;
-        }
-
         a {
-            color: #ffb3f8;
+            color: #00FF00;
             text-decoration: none;
-            transition: color 0.3s, text-shadow 0.3s;
         }
-
         a:hover {
-            text-shadow: 0 0 15px #ffb3f8, 0 0 25px #ff73d9;
-            color: #ff73d9;
-        }
-
-        /* Background Effects */
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            overflow: hidden;
-        }
-
-        .lines {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent 0,
-                transparent 1px,
-                rgba(255, 179, 248, 0.2) 2px
-            );
-            animation: scroll 10s linear infinite;
-        }
-
-        /* Animations */
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-
-        @keyframes glitch {
-            0%, 100% { text-shadow: 2px 0 #ff66c4, -2px 0 #ffb3f8; }
-            50% { text-shadow: -2px 0 #ff66c4, 2px 0 #ffb3f8; }
-        }
-
-        @keyframes fade-in {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes scroll {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-100%); }
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .card {
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .avatar {
-                width: 100px;
-                height: 100px;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="background">
-        <div class="lines"></div>
-    </div>
+
     <div class="container">
-        <header>
-            <div class="avatar">
-                <img src="avatar.png" alt="Аватар">
+        <div class="header">
+            <span>Фембой Хакер</span>
+        </div>
+
+        <div class="intro">
+            <p>Привет, меня зовут [ТВОЕ ИМЯ], я — фембой, любящий хакерский стиль и кодирование. Добро пожаловать на мой сайт, где я делюсь своей биографией и мыслями о жизни, стиле и цифровой культуре. Тут я расскажу о себе, своих увлечениях и жизни в стиле фембой хакера.</p>
+        </div>
+
+        <div class="section">
+            <h2>Моя История</h2>
+            <p>Я вырос в мире, полном технологий и возможностей. С детства увлекался компьютерами и программированием. Вдохновленный хакерской культурой, я всегда стремился быть на шаг впереди. Но при этом я не забываю, кто я есть, и горжусь своим фембой-стилем.</p>
+            <div class="code">
+                // Код первого проекта
+                <br>function helloWorld() {
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Привет, мир!");
+                <br>}
             </div>
-            <h1 class="glitch">Привет, я [Твое имя]</h1>
-            <p class="subtitle flicker">Фембой, разработчик и цифровой авантюрист.</p>
-        </header>
-        <main>
-            <section class="card">
-                <h2>Обо мне</h2>
-                <p>Технологии, креатив и стиль — моя жизнь. Я создаю проекты, которые вдохновляют и захватывают.</p>
-            </section>
-            <section class="card">
-                <h2>Навыки</h2>
-                <ul>
-                    <li>Frontend и дизайн</li>
-                    <li>Python и JavaScript</li>
-                    <li>UI/UX в минималистичном стиле</li>
-                </ul>
-            </section>
-            <section class="card">
-                <h2>Контакты</h2>
-                <p>Напиши мне: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-            </section>
-        </main>
+        </div>
+
+        <div class="section">
+            <h2>Стиль и Вдохновение</h2>
+            <p>Мой стиль — это смесь хакерской эстетики и феминизма. Я люблю носить стильную одежду, которая сочетает в себе элементы как феминности, так и киберпанка. Все эти вещи дают мне возможность чувствовать себя уверенно и в своем стиле, и в своем цифровом пространстве.</p>
+            <div class="code">
+                // Пример CSS стилей для фембой хакера
+                <br>body {
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;color: #FF00FF; /* Стиль фембой */
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #1a1a1a; /* Хакерская эстетика */
+                <br>}
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 — Фембой Хакер. Все права защищены.</p>
+            <p>Мой профиль на <a href="https://github.com" target="_blank">GitHub</a> и <a href="https://twitter.com" target="_blank">Twitter</a>.</p>
+        </div>
     </div>
+
 </body>
 </html>
