@@ -3,8 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Фембой, разработчик и цифровой авантюрист. Технологии, креатив и стиль.">
     <title>Femboy Hacker Bio</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'VT323', monospace;
+            background: radial-gradient(circle, #250036, #11001c 80%);
+            color: #ffb3f8;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px #ff73d9, 0 0 30px #ffb3f8, 0 0 45px #ff66c4;
+            animation: glitch 1.5s infinite alternate-reverse;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            animation: flicker 2s infinite alternate;
+            color: #ffb3f8;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border: 4px solid #ff73d9;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 179, 248, 0.7);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card {
+            background: rgba(255, 179, 248, 0.1);
+            border: 1px solid #ff73d9;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(255, 179, 248, 0.4);
+            animation: fade-in 1.5s ease-in-out forwards;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            color: #ff73d9;
+            text-shadow: 0 0 15px #ff73d9;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li::before {
+            content: "➤ ";
+            color: #ff73d9;
+        }
+
+        a {
+            color: #ffb3f8;
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        a:hover {
+            text-shadow: 0 0 15px #ffb3f8, 0 0 25px #ff73d9;
+            color: #ff73d9;
+        }
+
+        /* Background Effects */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent 0,
+                transparent 1px,
+                rgba(255, 179, 248, 0.2) 2px
+            );
+            animation: scroll 10s linear infinite;
+        }
+
+        /* Animations */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes glitch {
+            0%, 100% { text-shadow: 2px 0 #ff66c4, -2px 0 #ffb3f8; }
+            50% { text-shadow: -2px 0 #ff66c4, 2px 0 #ffb3f8; }
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="background">
