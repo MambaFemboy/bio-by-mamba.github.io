@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Фембой хакер — моя биография в стиле кодинга и стиля">
-    <title>Фембой Хакер — Биография</title>
+    <meta name="description" content="Фембой хакер — моя краткая биография и ссылки на соцсети">
+    <title>Фембой Хакер</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -16,6 +16,8 @@
         }
         .container {
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .header {
             font-size: 36px;
@@ -24,36 +26,37 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        .intro {
+        .bio {
             font-size: 18px;
             line-height: 1.6;
+            text-align: center;
         }
-        .section {
-            margin-top: 20px;
-            padding-left: 10px;
-        }
-        .code {
-            font-size: 14px;
-            color: #00FF00;
-            background-color: #000000;
-            padding: 10px;
-            border-radius: 5px;
+        .avatar {
             display: block;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            margin-top: 10px;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #00FF00;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #00FF00;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
         }
         .footer {
             margin-top: 40px;
             font-size: 12px;
             text-align: center;
-        }
-        a {
-            color: #00FF00;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -64,36 +67,20 @@
             <span>Фембой Хакер</span>
         </div>
 
-        <div class="intro">
-            <p>Привет, меня зовут [ТВОЕ ИМЯ], я — фембой, любящий хакерский стиль и кодирование. Добро пожаловать на мой сайт, где я делюсь своей биографией и мыслями о жизни, стиле и цифровой культуре. Тут я расскажу о себе, своих увлечениях и жизни в стиле фембой хакера.</p>
+        <img src="your-avatar-url.jpg" alt="Аватар" class="avatar">
+
+        <div class="bio">
+            <p>Привет, я — [ТВОЕ ИМЯ], фембой и хакер. Я увлекаюсь программированием, цифровыми технологиями и уникальным стилем. Мой путь — это сочетание киберпанковской эстетики и феминности. Добро пожаловать в мой мир, где код и стиль идут рука об руку.</p>
         </div>
 
-        <div class="section">
-            <h2>Моя История</h2>
-            <p>Я вырос в мире, полном технологий и возможностей. С детства увлекался компьютерами и программированием. Вдохновленный хакерской культурой, я всегда стремился быть на шаг впереди. Но при этом я не забываю, кто я есть, и горжусь своим фембой-стилем.</p>
-            <div class="code">
-                // Код первого проекта
-                <br>function helloWorld() {
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Привет, мир!");
-                <br>}
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Стиль и Вдохновение</h2>
-            <p>Мой стиль — это смесь хакерской эстетики и феминизма. Я люблю носить стильную одежду, которая сочетает в себе элементы как феминности, так и киберпанка. Все эти вещи дают мне возможность чувствовать себя уверенно и в своем стиле, и в своем цифровом пространстве.</p>
-            <div class="code">
-                // Пример CSS стилей для фембой хакера
-                <br>body {
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;color: #FF00FF; /* Стиль фембой */
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #1a1a1a; /* Хакерская эстетика */
-                <br>}
-            </div>
+        <div class="social-links">
+            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+            <a href="https://twitter.com/your-profile" target="_blank">Twitter</a>
+            <a href="https://instagram.com/your-profile" target="_blank">Instagram</a>
         </div>
 
         <div class="footer">
             <p>© 2025 — Фембой Хакер. Все права защищены.</p>
-            <p>Мой профиль на <a href="https://github.com" target="_blank">GitHub</a> и <a href="https://twitter.com" target="_blank">Twitter</a>.</p>
         </div>
     </div>
 
